@@ -1,43 +1,130 @@
-# Fitzone-Gym-management-System
+Fitness Center Management System
+A full-stack web application for managing fitness center operations, including member management, trainer scheduling, class bookings, and subscription plans.
 
-Project Description
+🚀 Features
+User Authentication: Secure JWT-based authentication with role-based access (Admin, Trainer, Member)
+Member Management: CRUD operations for gym members
+Trainer Management: Manage trainers and their schedules
+Class Scheduling: Book and manage fitness classes
+Subscription Plans: Various membership plans management
+Admin Dashboard: Comprehensive dashboard with charts and analytics
+Responsive Design: Mobile-friendly UI built with Tailwind CSS
+🛠️ Tech Stack
+Frontend
+React 18 + Vite
+Tailwind CSS
+Framer Motion (animations)
+Recharts (data visualization)
+React Router DOM
+React Hot Toast (notifications)
+Backend
+Node.js + Express 5
+MongoDB + Mongoose
+JWT Authentication
+bcryptjs (password hashing)
+📁 Project Structure
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── context/        # React Context (Auth)
+│   │   ├── layouts/        # Page layouts
+│   │   ├── pages/          # Page components
+│   │   ├── services/       # API service functions
+│   │   └── utils/          # Helper functions
+│   └── ...
+│
+├── server/                 # Node.js backend
+│   ├── config/             # Database & cloud config
+│   ├── controllers/        # Route controllers
+│   ├── middleware/         # Auth & validation middleware
+│   ├── models/             # Mongoose models
+│   ├── routes/             # API routes
+│   └── server.js           # Entry point
+│
+└── README.md
+🚦 Getting Started
+Prerequisites
+Node.js (v18 or higher)
+MongoDB Atlas account or local MongoDB
+Installation
+Clone the repository
 
-FitZone – Fitness Center Management System is a full-stack web application designed to manage the daily operations of a gym or fitness center in a structured and efficient way. The system replaces manual record-keeping with a centralized digital platform for managing members, trainers, subscriptions, and class schedules.
+git clone https://github.com/yourusername/fitness-center-management.git
+cd fitness-center-management
+Setup Backend
 
-The application follows a role-based authentication system with separate access for Admin, Trainer, and Member. Admins can manage users, trainers, subscription plans, and class schedules, while members can view available classes, manage their memberships, and track their fitness-related activities.
+cd server
+npm install
+Create a .env file in the server folder:
 
-The frontend is built using React (Vite) and Tailwind CSS, ensuring a fast, responsive, and modern user interface. The backend is developed with Node.js, Express, and MongoDB, using JWT-based authentication for secure login and authorization.
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+JWT_EXPIRE=30d
+NODE_ENV=development
+Setup Frontend
 
-This project addresses real-world gym management challenges such as member data handling, trainer scheduling, class booking, and subscription tracking. It serves as a strong foundation for a production-ready system and can be easily extended with additional features like online payments, attendance tracking, and analytics.
+cd ../client
+npm install
+Seed the Database (Optional)
 
- Key Features
+cd ../server
+node seed.js
+Running the Application
+Start Backend Server
 
-Full-stack MERN architecture
+cd server
+npm run dev
+Server runs on http://localhost:5000
 
-Role-based access control (Admin / Trainer / Member)
+Start Frontend Development Server
 
-Secure authentication using JWT
+cd client
+npm run dev
+Client runs on http://localhost:5173
 
-Responsive and modern UI with Tailwind CSS
+🔐 Default Admin Credentials
+After seeding the database:
 
-Scalable backend structure for future enhancements
+Email: admin@fitzone.com
+Password: admin123
+📱 Pages
+Home - Landing page with hero section
+About - About the fitness center
+Programs - Available fitness programs
+Trainers - Meet our trainers
+Schedule - Class schedule
+Pricing - Membership plans
+Contact - Contact form and location
+Login/Register - Authentication pages
+Admin Dashboard - Admin management panel
+📄 API Endpoints
+Authentication
+POST /api/auth/register - Register new user
+POST /api/auth/login - Login user
+Members
+GET /api/members - Get all members
+POST /api/members - Create member
+PUT /api/members/:id - Update member
+DELETE /api/members/:id - Delete member
+Trainers
+GET /api/trainers - Get all trainers
+POST /api/trainers - Create trainer
+PUT /api/trainers/:id - Update trainer
+DELETE /api/trainers/:id - Delete trainer
+Classes
+GET /api/classes - Get all classes
+POST /api/classes - Create class
+PUT /api/classes/:id - Update class
+DELETE /api/classes/:id - Delete class
+Subscriptions
+GET /api/subscriptions - Get all subscriptions
+POST /api/subscriptions - Create subscription
+🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
- Tech Stack
+📝 License
+This project is licensed under the MIT License.
 
-Frontend: React (Vite), Tailwind CSS
-
-Backend: Node.js, Express.js
-
-Database: MongoDB
-
-Authentication: JSON Web Tokens (JWT)
-
-🔍 Future Enhancements
-
-Payment gateway integration
-
-Attendance and progress tracking
-
-Email or notification system
-
-Analytics and reporting dashboard
+👨‍💻 Author
+Md kamar rza khan
